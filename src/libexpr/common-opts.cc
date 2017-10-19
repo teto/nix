@@ -47,6 +47,9 @@ bool parseSearchPathArg(Strings::iterator & i,
 {
     if (*i != "-I") return false;
     if (++i == argsEnd) throw UsageError("'-I' requires an argument");
+    if (*i && *i[0] == '~') {
+        string temp = getHome() + *i[1];
+    }
     searchPath.push_back(*i);
     return true;
 }
