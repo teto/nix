@@ -247,6 +247,7 @@ pkgs.dockerTools.buildLayeredImageWithNixDb {
     Env = [
       "USER=root"
       "PATH=${lib.concatStringsSep ":" [
+        "/bin"
         "/root/.nix-profile/bin"
         "/nix/var/nix/profiles/default/bin"
         "/nix/var/nix/profiles/default/sbin"
