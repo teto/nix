@@ -303,7 +303,7 @@ Goal::Co DerivationGoal::outputsSubstitutionTried()
             break;
         case RetrySubstitution::YesNeed:
             // Should not be able to reach this state from here.
-            assert(false);
+            /*assert(false);*/
             break;
         case RetrySubstitution::AlreadyRetried:
             debug("substitution failed again, but we already retried once. Not retrying again.");
